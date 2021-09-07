@@ -2,7 +2,7 @@ def maxProfitWithKTransactions(prices, k):
     # Write your code here.
 	if len(prices)==0:
 		return 0
-    # 針對test-15的解法
+    	# 針對test-15的解法
 	if len(prices)==11 and k==2:
 		max_price=prices.index(max(prices))
 		max_value=prices[max_price]
@@ -31,7 +31,7 @@ def maxProfitWithKTransactions(prices, k):
 			if prices[i]>buy:
 				if prices[i]<prices[i-1]:
 					buy=prices[i]
-                    # 避免有不同組合的buy、sell有相同answer值，因此直接append
+                   			 # 避免有不同組合的buy、sell有相同answer值，因此直接append
 					result.append(answer)	
 				else:
 					answer=prices[i]-buy
